@@ -1,0 +1,233 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+   body{
+    background: #11142c;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* / margin-left: 200px; / */
+    display:flex;
+    
+    
+  } 
+  .container{
+    height: 69vh;
+    margin-left: 100px;
+    margin-top: 75px;
+    justify-content: center;
+    color: rgba(0,0,0,.65);
+    background:white;
+    /* / border-radius: 50 50 50px 50px; / */
+    /* / border-color: #fe1414; / */
+    
+    width: 500px;
+    position: absolute;
+    border-radius: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  }
+  /* .main-content{
+    background-color: #f40909;
+  } */
+
+  .main-content{
+    height: 90vh;
+    width: 700px;
+    margin-left: 550px;
+    margin-top: 50px;
+    justify-content: center;
+    color: rgba(151, 21, 21, 0.65);
+    /* / background-color:rgb(109, 109, 146); / */
+    /* / border-radius: 50 50 50px 50px; / */
+    /* / border-color: #fe1414; / */
+    
+    /* / border-width: 500px; / */
+    position: absolute;
+    border-radius: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* / box-shadow: rgba(0, 0, 0, .65);; / */
+    background: #1d2037;
+  }
+  
+  .header{
+    text-align: center;
+    background-color: darkblue;
+    background-image: url("https://app.learntowin.us/static/media/loginPane.fd69c521.png");
+    background-size: cover;
+    color: white;
+    height: 200px;
+    border-radius: 0 0 2px 2px;
+    width: 500px;
+    
+    margin-left: 1rem;
+    align-items: center;
+    display: inline-block;
+    border-color: #fe1414;
+    transform: translate(-27.9px,0px);
+    
+    
+  
+  }
+  .header h3{
+    padding-top: 10px;
+
+  }
+  
+  form{
+    margin: 10px 0 20px 0;
+  }
+  
+  input[type="text"],input[type="password"]{
+    width: 90%;
+    box-sizing: border-box;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border: 1px solid #CCC;
+    background: #EEE;
+    /* / border-radius: 8px; / */
+    padding: 10px 10px;
+    font-size: 18px;
+    display:block;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: .5em;
+    padding: 0;
+    color: inherit;
+    font-size: 1.5em;
+    line-height: inherit;
+    white-space: normal;
+  }
+  .pass{
+    margin-left: 170px;
+    font-family: "Muli",serif;
+  }
+  
+  input[type="checkbox"]{
+    margin-left: 27.5%;
+    border: none;
+    border-radius: 2px;
+    border-style: none;
+    margin-bottom: 30px;
+    display: block;
+  }
+   
+   .label{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  
+  input[type="submit"]{
+  
+    display: block;
+    margin: auto;
+    padding: 4px 25px;
+    /* / background-color:black; / */
+    color: red;
+    cursor: pointer;
+    transform: translate(0px,15px);
+    /* / border-color: #f40909; / */
+    border-color: #f40909;
+    border-radius: 5px;
+    font-size:25px ;
+    
+    
+  }
+  input[type="submit"]:hover{
+    border-color: #f40909;
+  
+  }
+  .Admin{
+    background-color: rgb(25, 15, 15);
+    color:red;
+    padding: 4px 25px;
+    font-size:25px ;
+    border-radius: 5px;
+    position: relative;
+    transform: translate(0, 70px);
+    
+    
+  
+  }
+  .Admin:hover{
+    background: #5f5a5a;
+  
+  }
+  .User{
+    background-color: white;
+    color:black;
+    padding: 4px 25px;
+    font-size: 25px;
+    border-radius: 5px;
+    position: relative;
+    transform: translate(0, 70px);
+    
+  
+  }
+  .User:hover{
+    background-color: #6985CA;
+  }
+  
+  .span-container span{
+    font-size: 15px;
+    color: #29458A;
+    display: block;
+  }
+  .span-container span:nth-child(1){
+    float: left;
+    margin-left: 26.7%;
+  }
+  .span-container span:nth-child(2){
+    float: left;
+    margin-left: 50px;
+  }
+  
+  .content{
+    /* padding-bottom: 30px;
+    display: block;
+  border: 0ch; */
+  background-color: #fff;
+  }
+  
+  .pane-sign-in-welcome {
+    font-family: "Muli",serif;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 27px;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    /* / margin: 56px 90px 12px; / */
+  display: block;
+  margin-top: 20px;
+}
+.pane-sign-in-type {
+    font-family: "Muli",serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 20px;
+    /* / margin: 0 80px 33px; / */
+    line-height: 10px;
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+}
+
