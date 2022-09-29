@@ -332,6 +332,7 @@ class Login1 extends Component {
                                                   className="MuiButtonBase-root MuiButton-root MuiButton-outlined login-btn MuiButton-outlinedSecondary MuiButton-outlinedSizeLarge MuiButton-sizeLarge"
                                                   tabIndex={0}
                                                   type="submit"
+                                                  style={{width:"200px"}}
                                                 >
                                                   <span className="MuiButton-label">
                                                     Log In

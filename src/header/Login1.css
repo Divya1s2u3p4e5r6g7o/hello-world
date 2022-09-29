@@ -528,7 +528,7 @@ legend {
 }
 .ant-menu-submenu {
   transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
-    background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+  background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
     padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-menu-item:active,
@@ -772,7 +772,7 @@ a:hover {
   border-top-right-radius: 6px;
 }
 .pane-sign-in-welcome {
-  font-family: "Muli", serif;
+  font-family: "Muli",sans-serif;
   font-style: italic;
   font-weight: 900;
   line-height: 43px;
@@ -782,7 +782,7 @@ a:hover {
   margin: 56px 90px 12px;
 }
 .pane-sign-in-type {
-  font-family: "Muli", serif;
+  font-family: "Muli", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -893,7 +893,7 @@ a:hover {
   padding: 2px 13.2%;
   border: 2px solid #ea2139;
   text-transform: none;
-  width: 216px;
+  width: 100px;
 }
 .login-form-wrapper
   .login-form-col
