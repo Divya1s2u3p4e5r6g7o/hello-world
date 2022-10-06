@@ -1,9 +1,36 @@
-import React, { Component } from 'react';
-import'./Login1.css'
+import React,{useState} from 'react'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-class Login1 extends Component {
-    render() {
-        return (
+import'./Login1.css'
+const Login1 = () => {
+  const [emailid ,setEmail]=useState('');
+  const[password,setPassword]=useState('');
+  const navigate=useNavigate();
+  const handleLogin = async (e) =>{
+    e.preventDefault();
+
+    
+    let r = await axios.post("http://localhost:7399/api/logins/Registration",{emailid:emailid,password:password})
+    console.log(r)
+
+navigate('/landingscreen')
+    
+    }
+ 
+   
+    // if(emailid){
+    //   localStorage.setItem('user',JSON.stringify(emailid));
+    // }else{
+    //   alert('please enter correct details')
+    // }
+  
+  return (
+    <div>
+    
+
+
+
             <div>
             <header className="public-header">
               <div className="ant-row-flex ant-row-flex-space-between">
@@ -183,7 +210,7 @@ class Login1 extends Component {
             <div className="login-page-wrapper">
               <div
                 className="ScrollbarsCustom"
-                style={{ height: "100vh", width: "400%" }}
+                style={{ height: "100vh", width: "100vw" }}
               >
                 <div className="ScrollbarsCustom-Wrapper">
                   <div className="ScrollbarsCustom-Scroller">
@@ -248,77 +275,24 @@ class Login1 extends Component {
                                             <form id="sign-in-form" noValidate="">
                                               <div>
                                                 <div className="MuiFormControl-root MuiTextField-root jss59 login-input MuiFormControl-marginNormal MuiFormControl-fullWidth">
-                                                  <label
-                                                    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
-                                                    data-shrink="false"
-                                                    htmlFor="email"
-                                                    id="email-label"
-                                                  >
-                                                    Email
-                                                    <span
-                                                      aria-hidden="true"
-                                                      className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                                                    >
-                                                      {" "}
-                                                      *
-                                                    </span>
-                                                  </label>
+                                                
                                                   <div className="MuiInputBase-root MuiOutlinedInput-root jss61 MuiInputBase-fullWidth MuiInputBase-formControl">
-                                                    <input
-                                                      aria-invalid="false"
-                                                      id="email"
-                                                      name="email"
-                                                      required=""
-                                                      type="email"
-                                                      data-testid=""
-                                                      className="MuiInputBase-input MuiOutlinedInput-input jss60"
-                                                      defaultValue=""
-                                                    />
-                                                    <fieldset
-                                                      aria-hidden="true"
-                                                      className="jss62 MuiOutlinedInput-notchedOutline"
-                                                    >
-                                                      <legend className="jss64">
-                                                        <span>Email&nbsp;*</span>
-                                                      </legend>
-                                                    </fieldset>
+                                                    
+                                                  <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="email" id="email" name="email" onChange={(e)=>setEmail(e.target.value)} value={emailid} style={{width:"80%"}}/>
+                                                  
+        
+                                                   
                                                   </div>
                                                 </div>
                                                 <div className="MuiFormControl-root MuiTextField-root jss59 login-input MuiFormControl-marginNormal MuiFormControl-fullWidth">
-                                                  <label
-                                                    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required"
-                                                    data-shrink="false"
-                                                    htmlFor="email"
-                                                    id="email-label"
-                                                  >
-                                                    Password
-                                                    <span
-                                                      aria-hidden="true"
-                                                      className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
-                                                    >
-                                                      {" "}
-                                                      *
-                                                    </span>
-                                                  </label>
-                                                  <div className="MuiInputBase-root MuiOutlinedInput-root jss61 MuiInputBase-fullWidth MuiInputBase-formControl">
-                                                    <input
-                                                      aria-invalid="false"
-                                                      id="email"
-                                                      name="email"
-                                                      required=""
-                                                      type="email"
-                                                      data-testid=""
-                                                      className="MuiInputBase-input MuiOutlinedInput-input jss60"
-                                                      defaultValue=""
-                                                    />
-                                                    <fieldset
-                                                      aria-hidden="true"
-                                                      className="jss62 MuiOutlinedInput-notchedOutline"
-                                                    >
-                                                      <legend className="jss64">
-                                                        <span>Email&nbsp;*</span>
-                                                      </legend>
-                                                    </fieldset>
+                                                 
+                                                  <div className="MuiInputBase-root MuiOutlinedInput-root jss59 MuiInputBase-fullWidth MuiInputBase-formControl">
+                                                  <label for="password">Password:</label>
+<input type="password" id="password" name="password"  onChange={(e)=>setPassword(e.target.value)} value={password}></input>
+                                                  
+                                                   
+                                                    
                                                   </div>
                                                 </div>
                                                
@@ -333,6 +307,7 @@ class Login1 extends Component {
                                                   tabIndex={0}
                                                   type="submit"
                                                   style={{width:"200px"}}
+                                                  onClick={handleLogin}
                                                 >
                                                   <span className="MuiButton-label">
                                                     Log In
@@ -372,8 +347,15 @@ class Login1 extends Component {
             </div>
           </div>
           
-        );
-    }
+        
+  
+
+
+
+    </div>
+  )
+  
 }
 
-export default Login1;
+export default Login1
+
